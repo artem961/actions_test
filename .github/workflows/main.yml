@@ -8,7 +8,7 @@ on:
 jobs:
   first-job:
     runs-on: ubuntu-latest
-
+    
     steps:
     - name: first step
       run: echo "Hi biba"
@@ -17,6 +17,7 @@ jobs:
       run: echo "Hi boba"
   second-job:
     runs-on: ubuntu-latest
+    needs: [first-job]
 
     steps:
     - name: finishing
