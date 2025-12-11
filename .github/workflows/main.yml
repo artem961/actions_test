@@ -6,9 +6,19 @@ on:
       - main
   workflow_dispatch:
 jobs:
-  test-job:
+  first-job:
     runs-on: ubuntu-latest
 
     steps:
-    - name: hi bibaboba
-      run: echo "Hi bibaboba"
+    - name: first step
+      run: echo "Hi biba"
+
+    - name: second step
+      run: echo "Hi boba"
+  second-job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: finishing
+      run: ls -la
+  
